@@ -5,7 +5,7 @@ rm -rf output || true
 mkdir -p output
 
 echo "=> Erzeuge PDF mit lualatex"
-lualatex -interaction=nonstopmode -halt-on-error -output-directory=output main.tex
+lualatex -interaction=nonstopmode -halt-on-error -halt-on-warning -output-directory=output main.tex
 lualatex -interaction=nonstopmode -halt-on-error -output-directory=output main.tex || true
 
 echo "=> Erzeuge EPUB mit tex4ebook"
