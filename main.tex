@@ -1,0 +1,47 @@
+\documentclass[12pt,oneside]{book}
+
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0
+  \errmessage{Please use XeLaTeX or LuaLaTeX for best results}
+\fi
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+\setotherlanguage{latin}
+
+\usepackage[a4paper,inner=25mm,outer=20mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{microtype}
+
+\usepackage{graphicx}
+
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
+\usepackage{style/book-style}
+
+\\title{Latine Loqui Facile Est Omnibus \\[0.5em] \\large Subtitel (Latein \\& Deutsch) \\[1em] \\textit{Facile est Latine loqui.}}
+\author{Aureus Atalantus}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\input{style/cover-note.tex}
+\tableofcontents
+
+\mainmatter
+
+\input{chapters/01_einleitung.tex}
+\input{chapters/02_latine.tex}
+\input{chapters/03_abschluss.tex}
+
+\backmatter
+\printbibliography
+
+\end{document}
