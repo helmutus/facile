@@ -17,7 +17,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y --no-install-recommends texlive-full && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    texlive \
+    texlive-extra-utils \
+    texlive-lang-european \
+    texlive-lang-german \
+    texlive-latex-base \
+    texlive-latex-extra \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y \
+    texlive-bibtex-extra \
+    biber
 
 WORKDIR /work
 
