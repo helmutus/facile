@@ -9,26 +9,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     unzip \
     ca-certificates \
-    pandoc \
     python3 \
     python3-pip \
-    imagemagick \
-    ghostscript \
-    fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y \
-    texlive \
-    texlive-extra-utils \
-    texlive-lang-european \
-    texlive-lang-german \
-    texlive-latex-base \
-    texlive-latex-extra \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && apt-get install -y \
-    texlive-bibtex-extra \
-    biber
+# install latex etc.
+COPY install.sh /install.sh
+RUN chmod +x install.sh && \
+    /install.sh && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /work
 
