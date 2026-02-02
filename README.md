@@ -6,7 +6,7 @@ make docker-run
 
 docker build -t builder . &&
     docker run -i builder &&
-    docker cp $(docker ps -alq):/work/output/main.pdf .
+    mkdir -p tmp && docker cp $(docker ps -alq):/work/output/main.pdf .
 ```
 
 ## Output
