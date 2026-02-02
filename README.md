@@ -3,6 +3,10 @@
 ## Build mit Docker
 ```bash
 make docker-run
+
+docker build -t builder . &&
+    docker run -i builder &&
+    docker cp $(docker ps -alq):/work/output/main.pdf .
 ```
 
 ## Output
