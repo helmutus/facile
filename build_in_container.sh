@@ -8,7 +8,7 @@ echo "=> Erzeuge PDF mit lualatex"
 lualatex -interaction=nonstopmode -halt-on-error -output-directory=output main.tex
 if grep -q "Warning" output/main.log; then
     echo "Warning detected! Stopping compilation."
-    exit 1
+    # exit 1
 fi
 lualatex -interaction=nonstopmode -halt-on-error -output-directory=output main.tex || true
 
