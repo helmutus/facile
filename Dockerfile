@@ -24,6 +24,6 @@ WORKDIR /work
 COPY build_in_container.sh /work/build_in_container.sh
 RUN chmod +x /work/build_in_container.sh
 
-COPY . /work/
+COPY book /work/
 
 CMD ["/work/build_in_container.sh"]
