@@ -8,5 +8,5 @@ make inside
 ```
 
 ## Output
-- PDF: `output/main.pdf`
+- PDF: `output/book.pdf`
 - EPUB: `output/book.epub` oder `output/book-pandoc.epub`
