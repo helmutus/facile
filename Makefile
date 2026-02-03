@@ -18,4 +18,4 @@ clean:
 
 inside: clean docker-run
 	mkdir -p tmp
-	docker cp $(CONTAINER_NAME):/work/output/main.pdf ./tmp
+	docker cp $(CONTAINER_NAME):/work/output/book.pdf ./tmp
