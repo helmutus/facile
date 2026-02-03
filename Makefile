@@ -10,7 +10,7 @@ docker-run: docker-build
 	docker run --name $(CONTAINER_NAME) -i $(IMAGE_NAME)
 
 build:
-	sh generate.sh
+	sh script/generate.sh
 
 clean:
 	rm -rf output tmp
