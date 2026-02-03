@@ -21,9 +21,9 @@ RUN chmod +x install.sh && \
 
 WORKDIR /work
 
-COPY build_in_container.sh /work/build_in_container.sh
-RUN chmod +x /work/build_in_container.sh
+COPY generate.sh /work/generate.sh
+RUN chmod +x /work/generate.sh
 
 COPY book /work/
 
-CMD ["/work/build_in_container.sh"]
+CMD ["/work/generate.sh"]
