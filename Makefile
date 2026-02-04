@@ -1,6 +1,6 @@
 .PHONY: docker-build docker-run build clean
 
-IMAGE_NAME = latex-kdp:latest
+IMAGE_NAME = facile:latest
 CONTAINER_NAME = builder
 
 docker-build:
