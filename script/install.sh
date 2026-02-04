@@ -5,9 +5,6 @@ apt-get\
     ghostscript \
     fonts-dejavu-core \
 && apt-get install -y\
-    biber \
-    pandoc \
-&& apt-get install -y\
     texlive \
     texlive-bibtex-extra \
     texlive-extra-utils \
@@ -15,3 +12,6 @@ apt-get\
     texlive-latex-extra \
     texlive-lang-european \
     texlive-lang-german \
+# && apt-get install -y\
+#     biber \
+#     pandoc \
