@@ -21,4 +21,3 @@ fi
 #fi
 
 echo "Build fertig. Dateien in /work/output"
-ls -lh output || true
