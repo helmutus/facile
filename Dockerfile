@@ -13,6 +13,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 #     python3-pip \
 #     && rm -rf /var/lib/apt/lists/*
 
+# do not install documentation
+RUN echo 'path-exclude=/usr/share/doc/*' > /etc/dpkg/dpkg.cfg.d/01_nodoc \
+ && echo 'path-exclude=/usr/share/man/*' >> /etc/dpkg/dpkg.cfg.d/01_nodoc \
+ && echo 'path-exclude=/usr/share/texlive/texmf-dist/doc/*' >> /etc/dpkg/dpkg.cfg.d/01_nodoc
+
 # install latex etc.
 COPY script/install.sh /install.sh
 RUN chmod +x install.sh && \
