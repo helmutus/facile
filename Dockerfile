@@ -22,7 +22,8 @@ RUN echo 'path-exclude=/usr/share/doc/*' > /etc/dpkg/dpkg.cfg.d/01_nodoc \
 COPY script/install.sh /install.sh
 RUN chmod +x install.sh && \
     /install.sh && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    rm install.sh
 
 WORKDIR /work
 
