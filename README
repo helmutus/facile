@@ -1,12 +1,13 @@
-# LaTeX Buchprojekt (Deutsch & Latein) mit Docker
+Facile est Latine loqui
+=======================
 
-## Build mit Docker
-```bash
-make docker-run
+Build mit Docker
+----------------
 
 make inside
-```
 
-## Output
-- PDF: `output/book.pdf`
-- EPUB: `output/book.epub` oder `output/book-pandoc.epub`
+Output
+------
+
+- PDF: `tmp/book.pdf`
+- LOG: `tmp/book.log`
