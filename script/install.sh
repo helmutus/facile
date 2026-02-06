@@ -1,17 +1,16 @@
 apt-get\
     -y update\
 && apt-get install -y\
-    imagemagick \
-    ghostscript \
     fonts-dejavu-core \
 && apt-get install -y\
-    texlive \
-    texlive-bibtex-extra \
-    texlive-extra-utils \
+    texlive-luatex \
     texlive-latex-base \
     texlive-latex-extra \
-    texlive-lang-european \
+    texlive-bibtex-extra \
+    texlive-latex-recommended \
     texlive-lang-german \
 # && apt-get install -y\
 #     biber \
 #     pandoc \
+# imagemagick \
+# ghostscript \
