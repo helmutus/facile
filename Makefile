@@ -3,6 +3,8 @@
 IMAGE_NAME = facile:latest
 CONTAINER_NAME = builder
 
+ARTEFACT = ./tmp/book.pdf
+
 docker-build:
 	docker build -t $(IMAGE_NAME) .
 
@@ -18,5 +20,8 @@ clean:
 
 inside: clean docker-run
 	mkdir -p tmp
-	docker cp $(CONTAINER_NAME):/work/output/main.pdf ./tmp/book.pdf
+	docker cp $(CONTAINER_NAME):/work/output/main.pdf ${ARTEFACT}
 	docker cp $(CONTAINER_NAME):/work/output/main.log ./tmp/book.log
+
+quick: inside
+	xdg-open ${ARTEFACT}
