@@ -17,8 +17,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        # rebases and merge verifying
+        fetch-depth: 0
+
     - name: print book inside docker container
       run: make inside
+
+    - name: verify commit signature
+      # ensure that every commit has a signature
+      run: git log -1 --show-signature
 
     - name: export pdf
       uses: actions/upload-artifact@v4
